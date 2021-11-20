@@ -15,18 +15,28 @@
         text-align: right;
     }
 
-    h2{
+    h1{
         color:#001366;
         font: bold;
         font-size: 35px;
+        text-align: center;
     }
 
     p{
         color:#001366;
         font: bold;
+        text-align: center;
         font-size: 18px;
+        
 
     }
+
+    #start-button{
+       font-size: 18px;
+       color:#001366;
+    }
+
+    
   
     .body {
       color: var(--primary);
