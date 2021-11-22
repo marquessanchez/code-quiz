@@ -1,3 +1,9 @@
+var
+
+
+
+
+
 const myQuestions = [
     {
         question: "What does HTML stand for?",
@@ -36,7 +42,7 @@ const myQuestions = [
         question: "Which statement is true?",
         answers: {
             A: "2===two",
-            B: "1===1+1",
+            B: "2===1+1",
             C: "500===500",
             D: "2+2===4",
         },
@@ -66,3 +72,8 @@ const myQuestions = [
     },
 ];
 
+// create start quiz button
+var editButtonEl = document.createElement("button");
+editButtonEl.textContent = "Start Quiz";
+editButtonEl.className = "btn start-btn";
+editButtonEl.setAttribute("data-task-id", taskId);
