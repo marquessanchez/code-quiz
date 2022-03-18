@@ -73,7 +73,11 @@ const myQuestions = [
 ];
 
 // create start quiz button
-var editButtonEl = document.createElement("button");
-editButtonEl.textContent = "Start Quiz";
-editButtonEl.className = "btn start-btn";
-editButtonEl.setAttribute("data-task-id", taskId);
+var startButton = document.querySelector("start");
+
+
+
+
+startButton.addEventListener("click", function() {
+    alert("button clicked");
+  });

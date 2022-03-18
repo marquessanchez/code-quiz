@@ -4,24 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Code Quiz</title>
-     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="high-score">High Scores</id> <a href="highscores.html"></a></div>
-        <div class="time">Time:</div>
-    </header>
+    <div class="timer"><h2>Timer: </h2> <p id="timer"></p></div>
     <div class="container">
-        <div id="intro"></div>
-        <h1>Code Quiz Challenge</h1>
-            <p>You have 60 seconds to answer as many questions correctly. If you answer a question incorrectly, 10 seconds will be deducted from your time. Once your time expires you will be able to view your score and enter your initials to see where you rank amongst otehr high scores. I hope you've been brushing up on your coding knowlege. Time starts when you click Start Quiz.</p>
-            <p>GOOD LUCK!</p>
-            <button class="btn" id="start-quiz">Start Quiz</button>
-            <script src="assets/js/quiz2.js"></script>
-        
+        <div id="question-container" class="hide">
+            <div><h2 id="question">Question</h2></div>
+            <div id="answer-buttons" class="btn-grid">
+                <button type="button" class="btn btn-primary btn-lg">Answer 1</button>
+                <button type="button" class="btn btn-primary btn-lg">Answer 2</button>
+                <button type="button" class="btn btn-primary btn-lg">Answer 3</button>
+                <button type="button" class="btn btn-primary btn-lg">Answer 4</button>
+            </div>
+        </div>
+        <div id="start" class="start">
+            <button type="button" id="start-btn" class="btn btn-success btn-lg"><h1>Start</h1></button>
+        </div>
+        <div id="result" class="hide"></div>
     </div>
-
-
+    <form id="highscore" class="hide">
+        <div class="form-group">
+        <label for="name">Enter your initials: </label>
+        <input type="text" name="name" id="name" required>
+        <input type="submit" value="Submit">
+        </div>
+    </form>
 </body>
+    <script src="assets/js/quiz2.js"></script>
 </html>
