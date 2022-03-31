@@ -5,51 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <!-- <link rel="stylesheet" href="assets/css/style.css"> -->
     <link rel="stylesheet" href="assets/css/style2.css">
 
 </head>
 <body>
-    <header>
-        <div class="high-score">High Scores</id> <a href="highscores.html"></a></div>
-        <div class="time">Time:</div>
-    </header>
+    <ul>
+        <div class="timer" id="time">TIME:</div>
+        <div class="high-score" id="high-score">HIGH SCORE</div>
+    </ul>
     <div class="container">
-        <div id="quiz">
-            <div id="question">Question</div>
-
+        <div id="quesion-container" class="hide">
+            <div id="question">QUESTION</div>
+            <div id="answers" class="btn-grid">
+                <button classs="btn">A</button>
+                <button classs="btn">B</button>
+                <button classs="btn">C</button>
+                <button classs="btn">D</button>
+            </div>
         </div>
-    <div class="choice-container">
-        <button name ="choice" class="choices">
-            <option value="Answer A">A</option>
-        </button>
-    </div>
-    <div class="choice-container">
-        <button name ="choice" class="choices">
-            <option value="Answer B">B</option>
-        </button>
-    </div>
-    <div class="choice-container">
-        <button name ="choice" class="choices">
-            <option value="Answer C">C</option>
-        </button>
-    </div>
-    <div class="choice-container">
-        <button name ="choice" class="choices">
-            <option value="Answer D">D</option>
-        </button>
-    </div>
+        <button id="start" class="start-btn">START</button>
+        <button id="next" class="next-btn">NEXT</button>
 
-
-    </div>
-
-
-
-
-
-
-
-    <script src="assets/js/quiz2.js"></script>
+    <script src="assets/js/quiz.js"></script>
     <!-- <script src="assets/js/quiz.js"></script> -->
 </body>
 </html>

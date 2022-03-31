@@ -1,12 +1,16 @@
-var
+var start = document.getElementById("start");
+var quiz = document.getElementById("quiz");
+var quesions = document.getElementById("quesions");
+var answerA = document.getElementById("A");
+var answerB = document.getElementById("B");
+var answerC = document.getElementById("C");
+var answerD = document.getElementById("D");
+var timer = document.getElementById("timer");
 
 
-
-
-
-const myQuestions = [
+const questions = [
     {
-        question: "What does HTML stand for?",
+        question: "Which of the following is correct?",
         answers: {
             A: "Hypertext Markup Language",
             B: "Hypertext Markdown Language",
@@ -72,11 +76,13 @@ const myQuestions = [
     },
 ];
 
+function start() {
+    displayQuestions(currentQuestionIndex)
+    questionContainerEl.remove("hide")
+}
+
 // create start quiz button
 var startButton = document.querySelector("start");
-
-
-
 
 startButton.addEventListener("click", function() {
     alert("button clicked");
