@@ -1,14 +1,39 @@
-var start = document.getElementById("start");
-var quiz = document.getElementById("quiz");
-var quesions = document.getElementById("quesions");
-var answerA = document.getElementById("A");
-var answerB = document.getElementById("B");
-var answerC = document.getElementById("C");
-var answerD = document.getElementById("D");
-var timer = document.getElementById("timer");
+var start = document.getElementById('start');
+var quiz = document.getElementById('quiz');
+var question = document.getElementById('question');
+var answerA = document.getElementById('A');
+var answerB = document.getElementById('B');
+var answerC = document.getElementById('C');
+var answerD = document.getElementById('D');
+var timer = document.getElementById('timer');
+var questionContainerEl = document.getElementById('question-container');
 
+let QuestionIndex = 0
 
-const questions = [
+// create start quiz button
+function startQuiz() {
+    console.log('START')
+    start.classList.add('hide')
+    randomQuestions = questions.sort(() => Math.random())
+    questionContainerEl.classList.remove('hide')
+    currentQuestionIndex = 0
+    // displayQuestion()
+}
+start.addEventListener('click', startQuiz)
+
+function displayQuestion(questions){
+    questionContainerEl = questionIndex;
+    let questionIndex = questions[questionIndex]
+    // displayQuestion(questionIndex)
+    console.log('display');
+    questionContainerEl.innerText = questions[questionIndex].question
+}
+
+function userAnswer() {
+    
+}
+
+var questions = [
     {
         question: "Which of the following is correct?",
         answers: {
@@ -76,14 +101,6 @@ const questions = [
     },
 ];
 
-function start() {
-    displayQuestions(currentQuestionIndex)
-    questionContainerEl.remove("hide")
-}
 
-// create start quiz button
-var startButton = document.querySelector("start");
 
-startButton.addEventListener("click", function() {
-    alert("button clicked");
-  });
+
